@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Merriweather&family=Nunito&family=Poppins:wght@300&family=Rubik&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+/* navigation bar start */
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #161A30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+
+}
+ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0px 12px;
+    padding: 0 3px;
+    position: relative;
+}
+
+li a:hover , li a.control{
+    color: aqua;
+}
+
+li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 0;
+    width: 0;
+    background-color: rgb(7, 129, 101);
+}
+
+li a:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(168, 195, 33);
+    transition: 0.3s ease-out;
+}
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.08, 1.08);
+}
+.barrs {
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+#bar {
+    display: none;
+}
+
+@media (max-width: 970px) {
+    .logo {
+        padding-left: -15px;
+    }
+    nav {
+        padding: 0 50px;
+    }
+
+
+
+
+}
+
+@media (max-width: 800px) {
+    nav {
+        position: relative;
+        position: fixed;
+    }
+    nav ul {
+        position: absolute;
+        left: -100%;
+        top: 45px;
+        background-color: #191d36;
+        display: block;
+        width: 100%;
+        line-height: 55px;
+        font-size: 21px;
+        text-align: center;
+        z-index: 1;
+        /* display: none; */
+        
+    }
+
+    nav ul li i {
+        
+        padding-right: 8px;
+    }
+
+
+
+    nav ul li:hover {
+        background-color: #191d40;
+    }
+
+    .barrs {
+        display: block;
+    }
+
+    #bar:checked ~ .barrs i::before {
+        content: "\f00d";
+        transition: all 0.3s;
+    }
+
+    #bar:checked ~ ul {
+        left: 0;
+        transition: all 0.3s;
+    }
+    
+}
+
+
+/* navigation abr end */
+
+/* home start */
+.home {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 50px;
+    background-color: #161A30;
+    
+}
+.home1_1 {
+    width: 50%;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+.p1{
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(22, 207, 192);
+}
+.p2{
+    font-size: 40px;
+    font-weight: bolder;
+    color: pink;
+}
+.p3 {
+    font-size: 20px;
+    color: white;
+    margin: 20px 0 100px 0;
+    animation: typing 4s infinite;
+    width: 3.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid yellow;
+}
+
+@keyframes typing {
+    0% {
+        width: 3.5ch;
+    }
+    50% {
+        width: 19ch;
+    }
+}
+
+.cv-download {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.download a{
+    color: black;
+    background-color: yellow;
+    font-weight: bolder;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 18px;
+    
+}
+
+.download a:hover {
+    color: white;
+    background-color: rgb(2, 143, 138);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.download:active {
+    background-color: yellow;
+}
+.home1_2 {
+    width: 50%;
+    height: 450px;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 50px;
+    position: relative;
+    
+}
+
+
+.bg-effect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.home1_2 .bg-effect:hover {
+    background-color: #161A30;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+
+
+
+@media (max-width: 780px) {
+    .home {
+        height: fit-content;
+    }
+    .p2 {
+        font-size: 35px;
+        font-weight: bolder;
+    }
+
+    .p3 {
+        font-size: 20px;
+    }
+
+    .home1_1 {
+        width: 50%;
+        padding-top: 150px;
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .p1 {
+        font-size: 20px;
+    }
+    .home .home1_1 .p2 {
+        font-size: 18px;
+        
+    }
+
+    .home .home1_1 .p3 {
+        font-size: 8px;
+        margin: 20px 0 60px 0;
+    }
+}
+@media (max-width: 670px) {
+    .home {
+        position: relative;
+        
+    }
+    .home1_1 {
+        width:50%;
+        padding-top: 150px;
+
+    }
+    .home1_2 {
+        width: 50%;
+        height: 300px;
+        background-position: center;
+    }
+
+    .p2 {
+        font-size: 25px;
+        font-weight: bolder;
+        
+    }
+
+    .p3 {
+        font-size: 20px;
+        margin: 20px 0 60px 0;
+    }
+
+    .download {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 970px) {
+
+    .home1_1 {
+        padding-left: 50px;
+    }
+    .p2 {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .p3 {
+        font-size: 15px;
+    }
+
+    .bg-effect {
+        position: absolute;
+        left: 65px;
+        top: 0;
+        width: 100%;
+        height: 60%;
+    }
+
+    .home1_2 .bg-effect:hover {
+        background-color: #161A30;
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 1250px) {
+    .bg-effect {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* home end */
+
+
+.heading {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* about section start */
+.about {
+    background-color:#313558;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 40px;
+}
+.about .profile {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    background-image: url("/images/pro-pic.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+/* about section end */
+/* service section start */
+.service {
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: #282b49;
+    padding-bottom: 50px;
+}
+.service .description {
+    text-align: center;
+    margin: 5px auto 25px auto;
+    text-align: center;
+    font-size: 15px;
+}
+.service .service-items {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.service .service-items .service-container {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: rgb(19, 30, 75);
+    opacity: 0.9;
+    border-radius: 10px;
+    gap: 10px;
+    filter: drop-shadow(10px 10px 10px #04081f);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.service .service-items .service-container:hover {
+    background-color: #191d40;
+    transform: scale(1.04);
+}
+.service .service-items .service-container i {
+    font-size: 40px;
+}
+
+@media(max-width:600px) {
+
+    .service .service-items {
+        display: block;
+        
+    }
+    .service .service-items .service-container {
+        width: 80%;
+        margin: 8px auto;
+        
+    }
+
+}
+/* service section end */
+
+/* project section start */
+#project {
+    width: 100%;
+    height: auto;
+    background-color: #191d40;
+}
+#project .project-demo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+
+}
+#project .project-demo .project1 .project-temp1{
+    width: 300px;
+    height: 210px;
+    background-image: url(/images/temp1.PNG);
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    opacity: 0.8;
+
+}
+
+
+#project .project-demo .project2 .project-temp2{
+    width: 300px;
+    height: 210px;
+    background-image: url(/images/temp2.PNG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    opacity: 0.8;
+
+}
+
+#project .project-demo .project3 .project-temp3{
+    width: 300px;
+    height: 210px;
+    background-image: url(/images/temp3.PNG);
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    opacity: 0.8;
+
+}
+.project-view{
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    background-color: gainsboro;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer; 
+    display: none;  
+}
+
+#project .project-demo .project1 .project-temp1:hover , .project-temp2:hover{
+    
+    opacity: 1;
+    transform: scale(1.005);
+}
+/* project section end */
+
+/* contact section start */
+#contact  {
+    background-color: #282b49;
+}
+.contact form {
+    text-align: center;
+    width: 45%;
+    margin: 0px auto 0 auto;
+
+}
+.contact form input {
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    padding: 3px 5px;
+    background-color: #313558;
+    color: rgb(233, 227, 227);
+}
+input::placeholder {
+    color: rgb(233, 227, 227);
+}
+.contact form textarea {
+    width: 100%;
+    margin-top: 15px;
+    padding: 3px 5px;
+    background-color: #313558;
+    color: rgb(233, 227, 227);
+    resize: none;
+}
+
+.contact .from-btn .btn {
+    padding: 5px 10px;
+    background-color: #161A30;
+    color: white;
+    margin: 10px auto;
+
+}
+
+
+@media(max-width:600px) {
+
+    .contact form {
+        width: 70%;
+    
+    }
+
+}
+/* contact section end */
+
+
+/* footer section start */
+footer {
+    max-width: 100%;
+    background-color: #191d40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 15px;
+}
+/* footer section end */
